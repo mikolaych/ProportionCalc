@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Prorortion Calc</string>
+    <string name="tittle">Расчет пропорции</string>
+    <string name="aSymbol">a</string>
+    <string name="bSymbol">b</string>
+    <string name="cSymbol">c</string>
+    <string name="xSymbol">x</string>
+    <string name="equals">=</string>
+    <string name="buttonStart">Рассчитать</string>
+    <string name="tittleDecimalPlaces">Знаков после запятой</string>
+</resources>

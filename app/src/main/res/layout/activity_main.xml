@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8a95a1"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tittle"
+        style="@style/TittleTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/tittle"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/aSymbol"
+        style="@style/TittleTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="#997055"
+        android:hint="@string/aSymbol"
+        android:inputType="number"
+        android:paddingHorizontal="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/equals"
+        app:layout_constraintTop_toBottomOf="@+id/tittle" />
+
+    <View
+        android:id="@+id/dividerAB"
+        android:layout_width="60dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/aSymbol"
+        app:layout_constraintStart_toStartOf="@+id/aSymbol"
+        app:layout_constraintTop_toBottomOf="@+id/aSymbol" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/bSymbol"
+        style="@style/TittleTextStyle"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="#997055"
+        android:paddingHorizontal="10dp"
+        android:hint="@string/bSymbol"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/dividerAB"
+        app:layout_constraintStart_toStartOf="@+id/dividerAB"
+        app:layout_constraintTop_toBottomOf="@+id/dividerAB" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/equals"
+        style="@style/TittleTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/equals"
+        app:layout_constraintBottom_toTopOf="@+id/xSymbol"
+        app:layout_constraintEnd_toEndOf="@+id/tittle"
+        app:layout_constraintStart_toStartOf="@+id/tittle"
+        app:layout_constraintTop_toBottomOf="@+id/cSymbol" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/cSymbol"
+        style="@style/TittleTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:background="#997055"
+        android:hint="@string/cSymbol"
+        android:inputType="number"
+        android:paddingHorizontal="10dp"
+        app:layout_constraintStart_toEndOf="@+id/equals"
+        app:layout_constraintTop_toBottomOf="@+id/tittle" />
+
+    <View
+        android:id="@+id/dividerCX"
+        android:layout_width="60dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/cSymbol"
+        app:layout_constraintStart_toStartOf="@+id/cSymbol"
+        app:layout_constraintTop_toBottomOf="@+id/cSymbol" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/xSymbol"
+        style="@style/TittleTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="#8a95a1"
+        android:text="@string/xSymbol"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/dividerCX"
+        app:layout_constraintStart_toStartOf="@+id/dividerCX"
+        app:layout_constraintTop_toBottomOf="@+id/dividerCX" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tittleDecimalPlaces"
+        style="@style/TittleTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#8a95a1"
+        android:inputType="number"
+        android:text="@string/tittleDecimalPlaces"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bSymbol" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/sliderDecimalPlaces"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="20dp"
+        android:stepSize="1"
+        android:value="0"
+        android:valueFrom="0"
+        android:valueTo="5"
+        app:labelBehavior="floating"
+        app:layout_constraintTop_toBottomOf="@+id/tittleDecimalPlaces"
+        app:thumbColor="#997055"
+        app:thumbRadius="10dp"
+        app:thumbStrokeColor="@color/white"
+        app:thumbStrokeWidth="2dp"
+        app:tickColor="#997055"
+        app:trackColor="#ffcf00"
+        app:trackHeight="3dp"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/round_style_red"
+        android:padding="10dp"
+        android:text="@string/buttonStart"
+        android:textColor="#ffcf00"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sliderDecimalPlaces" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/result"
+        style="@style/TittleTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:inputType="number"
+        android:padding="5dp"
+        android:textColor="#997055"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/buttonStart"
+        app:layout_constraintStart_toStartOf="@+id/sliderDecimalPlaces"
+        app:layout_constraintTop_toBottomOf="@+id/buttonStart"
+        tools:text="Х = 485" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
