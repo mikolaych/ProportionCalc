@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Prorortion Calc</string>
+    <string name="app_name">Proportion Calc</string>
     <string name="tittle">Расчет пропорции</string>
     <string name="aSymbol">a</string>
     <string name="bSymbol">b</string>
